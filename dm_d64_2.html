@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Bartolini Lucenti et al. in press. Dmanisi _Canis_ and Augmented Reality</title>
+    </head>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>ù
+
+    <body style='margin : 0px; overflow: hidden;'>
+        <a-scene embedded arjs='sourceType: webcam;'>
+         <a-marker preset="Hiro">
+            <a-entity 
+            obj-model="obj: url(https://raw.githubusercontent.com/BLetal20DmaAR/BLetal20DmaAR.github.io/master/model/D64_obj.obj); 
+            mtl: url(https://raw.githubusercontent.com/BLetal20DmaAR/BLetal20DmaAR.github.io/master/model/D64_obj.mtl)" rotation="-90 0 0" scale= "0.01 0.01 0.01">
+        </a-entity>
+        </a-marker>
+             <a-entity camera> 
+        </a-scene>
+    </body>
+</html>
+
