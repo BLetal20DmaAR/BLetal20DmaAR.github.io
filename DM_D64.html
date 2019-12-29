@@ -4,16 +4,15 @@
     <head>
         <title>Bartolini Lucenti et al. in press. Dmanisi _Canis_ and Augmented Reality</title>
     </head>
-<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <body style='margin : 0px; overflow: hidden;'>
-        <a-scene embedded arjs='sourceType: webcam;'>
-
-         <a-marker preset="Hiro">
-                <a-entity obj-model="obj: url(https://raw.githubusercontent.com/BLetal20DmaAR/BL_et_al_AR-files/master/D64_rotante.obj)" 
-                    scale="0.20 0.20 0.20" material= "color: gray"></a-entity>
-        </a-marker>
-             <a-entity camera rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"> 
+        <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+            <a-marker id="animated marker" type='barcode' value='4'>
+                <a-entity gltf-model="url(https://raw.githubusercontent.com/BLetal20DmaAR/BL_et_al_AR-files/master/undefined.gltf)" scale="0.05 0.05 0.05" rotation="-90 0 0"></a-entity>
+            </a-marker>
+             <a-entity camera> 
         </a-scene>
     </body>
 </html>
